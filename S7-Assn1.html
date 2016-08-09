@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Like/Unlike Button</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		body{
+			width:500px;
+			margin: 50px auto;
+		}
+		input[type="button"]{
+			width:150px;
+			height:40px;
+			//background-color: #87ceeb;
+			font-size: 16px;
+			font-weight: bold;
+			color:#fff;
+			letter-spacing: 1px;
+			outline: none;
+			cursor: pointer;
+			border:3px solid #ffa500;
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			border-radius: 8px;
+		}
+		.active{
+			background-color: #ff6347;
+		}
+		.inactive{
+			background-color: #87ceeb;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<input type="button" class="inactive" value="Like">
+	</div>
+	<script type="text/javascript">
+
+		var btn = document.getElementsByTagName("input")[0];
+
+		btn.addEventListener("click", function(){
+			console.log(btn.className );
+			if(btn.className == "inactive"){
+				btn.className = "active";
+			}
+			else{
+				btn.className = "inactive";
+			}
+			
+		});
+		
+			var x = function() {
+			  return console.log.call(console, true);
+			};
+			 
+			var y = {
+			  p: function () {
+			    return this;
+			  }
+			};
+			 
+			var f = y.p;
+			 console.log(f());
+			setTimeout(x, 0);
+			f();
+
+			var name = "Adrash";
+			var person1 = {
+				name : "Drishya",
+				greet : function(){
+					console.dir(this.name);
+				}
+			}
+			console.log(person1.greet());
+			var per1 = person1.greet;
+			per1();
+
+
+
+		
+	</script>
+</body>
+</html>
