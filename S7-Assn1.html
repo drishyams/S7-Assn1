@@ -43,38 +43,16 @@
 			console.log(btn.className );
 			if(btn.className == "inactive"){
 				btn.className = "active";
+				btn.value = "Unlike";
 			}
 			else{
 				btn.className = "inactive";
+				btn.value = "Like";
 			}
 			
 		});
 		
-			var x = function() {
-			  return console.log.call(console, true);
-			};
-			 
-			var y = {
-			  p: function () {
-			    return this;
-			  }
-			};
-			 
-			var f = y.p;
-			 console.log(f());
-			setTimeout(x, 0);
-			f();
-
-			var name = "Adrash";
-			var person1 = {
-				name : "Drishya",
-				greet : function(){
-					console.dir(this.name);
-				}
-			}
-			console.log(person1.greet());
-			var per1 = person1.greet;
-			per1();
+			
 
 
 
